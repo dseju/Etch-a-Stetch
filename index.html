@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Etch a Sketch</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+      integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <script src="script.js"></script>
+    <header>
+      <h1>Etch&nbsp;a&nbsp;Sketch</h1>
+    </header>
+
+    <main>
+      <div class="colour_choose">
+        <div class="color-pallete">
+          <input type="color" id="colour-opt" />
+        </div>
+        <div class="button-container">
+          <button onclick="colour_extract()" class="col" id="colour-mode">
+            Colour Mode
+          </button>
+          <button onclick="colour_random()" class="col" id="rainbow-mode">
+            Rainbow Mode
+          </button>
+          <button onclick="colour_remove()" class="col" id="erase">
+            Eraser
+          </button>
+          <button onclick="remove_all()" class="col" id="reset">Reset</button>
+        </div>
+      </div>
+      <div id="art_board"></div>
+      <div class="reset-slider">
+        <div id="size-grid"></div>
+        <input
+          onmousemove="update_grid_size()"
+          name="gridwh"
+          min="1"
+          max="64"
+          id="range-slider"
+          type="range"
+          ontouchend="update_grid_size()"
+          value="16"
+        />
+      </div>
+    </main>
+    <footer>
+      <p class="cpy-text">
+        Copyright&nbsp;<i class="fa fa-copyright" aria-hidden="true"></i
+        >&nbsp;2021 Dharmendra Seju
+      </p>
+
+      <p class="pun">
+        Made with&nbsp;&nbsp;<span class="smile">smile</span>&nbsp;&nbsp;in
+        Kanpur
+      </p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
